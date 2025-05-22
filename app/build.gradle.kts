@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.navigation.safe.args)
 }
 
 android {
@@ -41,6 +42,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    hilt {
+        enableAggregatingTask = false
+    }
 }
 
 dependencies {
@@ -54,6 +58,11 @@ dependencies {
     // ViewModel + LiveData
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
+    implementation(libs.lifecycle.runtime.ktx)
+
+    //Navigation Component
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     // Retrofit, OkHttp, Moshi
     implementation(libs.retrofit)
@@ -72,7 +81,10 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-
+    implementation(libs.javapoet)
+    // MD3
+    implementation(libs.material.v1100)
+    implementation(libs.swiperefreshlayout)
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
