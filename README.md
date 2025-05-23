@@ -18,6 +18,7 @@ Este proyecto fue desarrollado como parte de un **reto técnico** para una vacan
 | UI con XML + Material Design 3             | ✅           |
 | ViewBinding                                 | ✅           |
 | Pruebas unitarias e instrumentadas         | ✅           |
+| Uso de Flow / StateFlow / LiveData         | ✅           |
 
 ---
 
