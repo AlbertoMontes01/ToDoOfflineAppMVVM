@@ -29,10 +29,20 @@
                 android:id="@+id/textEmpty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="No hay tareas disponibles"
+                android:text="@string/no_hay_tareas_disponibles"
                 android:gravity="center"
                 android:visibility="gone"
                 android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+            <TextView
+                android:id="@+id/textOfflineBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D32F2F"
+                android:text="@string/you_re_offline"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="8dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewTodos"
@@ -40,7 +50,26 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:clipToPadding="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggleDeleteMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="12dp"
+                android:text="@string/delete_mode"
+                style="@style/Widget.Material3.Button.TonalButton" />
         </LinearLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/add_to_do"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:backgroundTint="?attr/colorPrimary"
+        app:tint="@android:color/white" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -21,7 +21,7 @@ object NetworkModule {
     fun provideRetrofit(BASE_URL: String): Retrofit =
         Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(MoshiConverterFactory.create()) // o Gson
+            .addConverterFactory(MoshiConverterFactory.create())
             .build()
 
     @Provides

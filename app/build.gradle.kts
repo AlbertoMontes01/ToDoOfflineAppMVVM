@@ -67,8 +67,10 @@ dependencies {
     // Retrofit, OkHttp, Moshi
     implementation(libs.retrofit)
     implementation(libs.retrofit.moshi)
+    ksp(libs.moshi.kotlin.codegen)
     implementation(libs.okhttp.logging)
     implementation(libs.moshi.kotlin)
+
 
     // Room
     implementation(libs.room.runtime)
@@ -89,4 +91,22 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Testing coroutines
+    testImplementation(libs.kotlinx.coroutines.test)
+
+// MockK
+    testImplementation(libs.mockk.v1139)
+
+    // Room testing (instrumented tests)
+    androidTestImplementation(libs.androidx.room.testing)
+
+// AndroidX test core y runner
+    androidTestImplementation(libs.androidx.core)
+    androidTestImplementation(libs.androidx.runner)
+
+// Hamcrest para asserts más expresivos
+    androidTestImplementation(libs.hamcrest.library)
+    testImplementation("com.google.truth:truth:1.1.3")
+
 }

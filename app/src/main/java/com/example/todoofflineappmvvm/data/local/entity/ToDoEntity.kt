@@ -6,8 +6,18 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "todo")
 data class ToDoEntity(
-    @PrimaryKey val id: Int,
-    @ColumnInfo(name = "userId") val userId: Int,
-    @ColumnInfo(name = "title") val title: String,
-    @ColumnInfo(name = "completed") val completed: Boolean
+    @PrimaryKey(autoGenerate = true)
+    val localId: Int = 0,
+
+    @ColumnInfo(name = "id")
+    val id: Int,
+
+    @ColumnInfo(name = "userId")
+    val userId: Int,
+
+    @ColumnInfo(name = "title")
+    val title: String,
+
+    @ColumnInfo(name = "completed")
+    val completed: Boolean
 )

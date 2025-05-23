@@ -3,4 +3,14 @@
     <string name="titulo">Título</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_to_do">Add To-Do</string>
+    <string name="no_hay_tareas_disponibles">No hay tareas disponibles</string>
+    <string name="title">Title</string>
+    <string name="completed">Completed</string>
+    <string name="save">Save</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="delete_mode">Mutiple Delete Mode</string>
+    <string name="delete">Delete</string>
+    <string name="you_re_offline">You\'re offline</string>
+    <string name="selected">Selected</string>
 </resources>

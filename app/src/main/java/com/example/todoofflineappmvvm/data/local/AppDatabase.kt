@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.todoofflineappmvvm.data.local.dao.ToDoDao
 import com.example.todoofflineappmvvm.data.local.entity.ToDoEntity
 
-@Database(entities = [ToDoEntity::class], version = 1, exportSchema = false)
+@Database(entities = [ToDoEntity::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun toDoDao(): ToDoDao
